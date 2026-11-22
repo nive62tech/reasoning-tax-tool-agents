@@ -1,0 +1,1918 @@
+[
+ {
+  "id": "t1_01",
+  "tier": 1,
+  "template": "order_status",
+  "prompt": "What is the current status of order O1042?",
+  "answer_type": "str",
+  "expected": "delivered",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1042"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t1_02",
+  "tier": 1,
+  "template": "order_status",
+  "prompt": "What is the current status of order O1020?",
+  "answer_type": "str",
+  "expected": "cancelled",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1020"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t1_03",
+  "tier": 1,
+  "template": "order_total",
+  "prompt": "What is the total amount of order O1051?",
+  "answer_type": "num",
+  "expected": 281.59,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1051"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t1_04",
+  "tier": 1,
+  "template": "order_total",
+  "prompt": "What is the total amount of order O1084?",
+  "answer_type": "num",
+  "expected": 642.51,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1084"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t1_05",
+  "tier": 1,
+  "template": "customer_email",
+  "prompt": "What is the email address of customer C002?",
+  "answer_type": "str",
+  "expected": "maya.garcia@example.com",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C002"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_customer"
+  ]
+ },
+ {
+  "id": "t1_06",
+  "tier": 1,
+  "template": "customer_email",
+  "prompt": "What is the email address of customer C003?",
+  "answer_type": "str",
+  "expected": "liam.brown@example.com",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C003"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_customer"
+  ]
+ },
+ {
+  "id": "t1_07",
+  "tier": 1,
+  "template": "product_price",
+  "prompt": "What is the catalog price of product P135?",
+  "answer_type": "num",
+  "expected": 259.35,
+  "reference_calls": [
+   [
+    "get_product",
+    {
+     "product_id": "P135"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_product"
+  ]
+ },
+ {
+  "id": "t1_08",
+  "tier": 1,
+  "template": "product_price",
+  "prompt": "What is the catalog price of product P107?",
+  "answer_type": "num",
+  "expected": 283.33,
+  "reference_calls": [
+   [
+    "get_product",
+    {
+     "product_id": "P107"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_product"
+  ]
+ },
+ {
+  "id": "t1_09",
+  "tier": 1,
+  "template": "stock",
+  "prompt": "How many units of product P124 are currently in stock?",
+  "answer_type": "num",
+  "expected": 23,
+  "reference_calls": [
+   [
+    "get_inventory",
+    {
+     "product_id": "P124"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_inventory"
+  ]
+ },
+ {
+  "id": "t1_10",
+  "tier": 1,
+  "template": "stock",
+  "prompt": "How many units of product P138 are currently in stock?",
+  "answer_type": "num",
+  "expected": 35,
+  "reference_calls": [
+   [
+    "get_inventory",
+    {
+     "product_id": "P138"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_inventory"
+  ]
+ },
+ {
+  "id": "t1_11",
+  "tier": 1,
+  "template": "customer_tier",
+  "prompt": "Which loyalty tier is customer C002 in?",
+  "answer_type": "str",
+  "expected": "silver",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C002"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_customer"
+  ]
+ },
+ {
+  "id": "t1_12",
+  "tier": 1,
+  "template": "customer_tier",
+  "prompt": "Which loyalty tier is customer C030 in?",
+  "answer_type": "str",
+  "expected": "gold",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C030"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_customer"
+  ]
+ },
+ {
+  "id": "t1_13",
+  "tier": 1,
+  "template": "open_tickets",
+  "prompt": "How many open support tickets does customer C019 have?",
+  "answer_type": "num",
+  "expected": 2,
+  "reference_calls": [
+   [
+    "list_tickets",
+    {
+     "customer_id": "C019",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "list_tickets"
+  ]
+ },
+ {
+  "id": "t1_14",
+  "tier": 1,
+  "template": "open_tickets",
+  "prompt": "How many open support tickets does customer C011 have?",
+  "answer_type": "num",
+  "expected": 1,
+  "reference_calls": [
+   [
+    "list_tickets",
+    {
+     "customer_id": "C011",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "list_tickets"
+  ]
+ },
+ {
+  "id": "t1_15",
+  "tier": 1,
+  "template": "newsletter",
+  "prompt": "Is liam.brown@example.com subscribed to the newsletter? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "no",
+  "reference_calls": [
+   [
+    "get_newsletter_status",
+    {
+     "email": "liam.brown@example.com"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_newsletter_status"
+  ]
+ },
+ {
+  "id": "t1_16",
+  "tier": 1,
+  "template": "newsletter",
+  "prompt": "Is maya.garcia@example.com subscribed to the newsletter? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "yes",
+  "reference_calls": [
+   [
+    "get_newsletter_status",
+    {
+     "email": "maya.garcia@example.com"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_newsletter_status"
+  ]
+ },
+ {
+  "id": "t1_17",
+  "tier": 1,
+  "template": "tier_discount",
+  "prompt": "What discount percentage does the silver loyalty tier receive?",
+  "answer_type": "num",
+  "expected": 5,
+  "reference_calls": [
+   [
+    "get_tier_discount",
+    {
+     "tier": "silver"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t1_18",
+  "tier": 1,
+  "template": "tier_discount",
+  "prompt": "What discount percentage does the gold loyalty tier receive?",
+  "answer_type": "num",
+  "expected": 10,
+  "reference_calls": [
+   [
+    "get_tier_discount",
+    {
+     "tier": "gold"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t1_19",
+  "tier": 1,
+  "template": "not_found",
+  "prompt": "What is the current status of order O9041?",
+  "answer_type": "str",
+  "expected": "NOT_FOUND",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O9041"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t1_20",
+  "tier": 1,
+  "template": "not_found",
+  "prompt": "What is the current status of order O9127?",
+  "answer_type": "str",
+  "expected": "NOT_FOUND",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O9127"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_01",
+  "tier": 2,
+  "template": "order_newsletter",
+  "prompt": "Is the customer who placed order O1075 subscribed to the newsletter? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "no",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1075"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C026"
+    }
+   ],
+   [
+    "get_newsletter_status",
+    {
+     "email": "isha.rossi@example.com"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "get_newsletter_status",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_02",
+  "tier": 2,
+  "template": "order_newsletter",
+  "prompt": "Is the customer who placed order O1014 subscribed to the newsletter? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "yes",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1014"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C009"
+    }
+   ],
+   [
+    "get_newsletter_status",
+    {
+     "email": "lucas.tanaka@example.com"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "get_newsletter_status",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_03",
+  "tier": 2,
+  "template": "order_customer_name",
+  "prompt": "What is the full name of the customer who placed order O1079?",
+  "answer_type": "str",
+  "expected": "Isha Silva",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1079"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C006"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_customer",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_04",
+  "tier": 2,
+  "template": "order_customer_name",
+  "prompt": "What is the full name of the customer who placed order O1073?",
+  "answer_type": "str",
+  "expected": "Anika Rossi",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1073"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C010"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_customer",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_05",
+  "tier": 2,
+  "template": "order_first_item_name",
+  "prompt": "What is the product name of the first line item in order O1041?",
+  "answer_type": "str",
+  "expected": "Juicer",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1041"
+    }
+   ],
+   [
+    "get_product",
+    {
+     "product_id": "P116"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_order",
+   "get_product"
+  ]
+ },
+ {
+  "id": "t2_06",
+  "tier": 2,
+  "template": "order_first_item_name",
+  "prompt": "What is the product name of the first line item in order O1017?",
+  "answer_type": "str",
+  "expected": "Drone",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1017"
+    }
+   ],
+   [
+    "get_product",
+    {
+     "product_id": "P136"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_order",
+   "get_product"
+  ]
+ },
+ {
+  "id": "t2_07",
+  "tier": 2,
+  "template": "email_open_tickets",
+  "prompt": "How many open support tickets does the customer with email maya.silva@example.com have?",
+  "answer_type": "num",
+  "expected": 1,
+  "reference_calls": [
+   [
+    "find_customer_by_email",
+    {
+     "email": "maya.silva@example.com"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C022",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "find_customer_by_email",
+   "list_tickets"
+  ]
+ },
+ {
+  "id": "t2_08",
+  "tier": 2,
+  "template": "email_open_tickets",
+  "prompt": "How many open support tickets does the customer with email zara.garcia@example.com have?",
+  "answer_type": "num",
+  "expected": 1,
+  "reference_calls": [
+   [
+    "find_customer_by_email",
+    {
+     "email": "zara.garcia@example.com"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C028",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "find_customer_by_email",
+   "list_tickets"
+  ]
+ },
+ {
+  "id": "t2_09",
+  "tier": 2,
+  "template": "order_first_item_stock",
+  "prompt": "How many units are currently in stock of the first line item in order O1066?",
+  "answer_type": "num",
+  "expected": 140,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1066"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P118"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_inventory",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_10",
+  "tier": 2,
+  "template": "order_first_item_stock",
+  "prompt": "How many units are currently in stock of the first line item in order O1080?",
+  "answer_type": "num",
+  "expected": 12,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1080"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P106"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_inventory",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_11",
+  "tier": 2,
+  "template": "customer_discount",
+  "prompt": "What discount percentage applies to customer C021 based on their loyalty tier?",
+  "answer_type": "num",
+  "expected": 5,
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C021"
+    }
+   ],
+   [
+    "get_tier_discount",
+    {
+     "tier": "silver"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_customer",
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t2_12",
+  "tier": 2,
+  "template": "customer_discount",
+  "prompt": "What discount percentage applies to customer C022 based on their loyalty tier?",
+  "answer_type": "num",
+  "expected": 0,
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C022"
+    }
+   ],
+   [
+    "get_tier_discount",
+    {
+     "tier": "basic"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_customer",
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t2_13",
+  "tier": 2,
+  "template": "order_country",
+  "prompt": "Which country is the customer who placed order O1069 based in? Use the 2-letter code.",
+  "answer_type": "str",
+  "expected": "IN",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1069"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C003"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_customer",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_14",
+  "tier": 2,
+  "template": "order_country",
+  "prompt": "Which country is the customer who placed order O1013 based in? Use the 2-letter code.",
+  "answer_type": "str",
+  "expected": "DE",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1013"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C030"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_customer",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_15",
+  "tier": 2,
+  "template": "order_first_item_category",
+  "prompt": "What product category does the first line item in order O1047 belong to?",
+  "answer_type": "str",
+  "expected": "kitchen",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1047"
+    }
+   ],
+   [
+    "get_product",
+    {
+     "product_id": "P112"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_order",
+   "get_product"
+  ]
+ },
+ {
+  "id": "t2_16",
+  "tier": 2,
+  "template": "order_first_item_category",
+  "prompt": "What product category does the first line item in order O1079 belong to?",
+  "answer_type": "str",
+  "expected": "office",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1079"
+    }
+   ],
+   [
+    "get_product",
+    {
+     "product_id": "P131"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_order",
+   "get_product"
+  ]
+ },
+ {
+  "id": "t2_17",
+  "tier": 2,
+  "template": "order_buyer_tickets",
+  "prompt": "How many open support tickets does the customer who placed order O1007 have?",
+  "answer_type": "num",
+  "expected": 1,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1007"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C003",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_order",
+   "list_tickets"
+  ]
+ },
+ {
+  "id": "t2_18",
+  "tier": 2,
+  "template": "order_buyer_tickets",
+  "prompt": "How many open support tickets does the customer who placed order O1020 have?",
+  "answer_type": "num",
+  "expected": 1,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1020"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C028",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 2,
+  "required_tools": [
+   "get_order",
+   "list_tickets"
+  ]
+ },
+ {
+  "id": "t2_19",
+  "tier": 2,
+  "template": "not_found_chain",
+  "prompt": "Is the customer who placed order O9310 subscribed to the newsletter? Answer yes or no, or NOT_FOUND if the order does not exist.",
+  "answer_type": "str",
+  "expected": "NOT_FOUND",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O9310"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t2_20",
+  "tier": 2,
+  "template": "not_found_chain",
+  "prompt": "Is the customer who placed order O9555 subscribed to the newsletter? Answer yes or no, or NOT_FOUND if the order does not exist.",
+  "answer_type": "str",
+  "expected": "NOT_FOUND",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O9555"
+    }
+   ]
+  ],
+  "n_ref_calls": 1,
+  "required_tools": [
+   "get_order"
+  ]
+ },
+ {
+  "id": "t3_01",
+  "tier": 3,
+  "template": "discounted_total",
+  "prompt": "Apply the buyer's loyalty-tier discount to the total of order O1041. What is the discounted total, rounded to 2 decimals?",
+  "answer_type": "num",
+  "expected": 946.67,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1041"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C029"
+    }
+   ],
+   [
+    "get_tier_discount",
+    {
+     "tier": "gold"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "get_order",
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t3_02",
+  "tier": 3,
+  "template": "discounted_total",
+  "prompt": "Apply the buyer's loyalty-tier discount to the total of order O1116. What is the discounted total, rounded to 2 decimals?",
+  "answer_type": "num",
+  "expected": 162.91,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1116"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C019"
+    }
+   ],
+   [
+    "get_tier_discount",
+    {
+     "tier": "silver"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "get_order",
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t3_03",
+  "tier": 3,
+  "template": "discounted_total",
+  "prompt": "Apply the buyer's loyalty-tier discount to the total of order O1069. What is the discounted total, rounded to 2 decimals?",
+  "answer_type": "num",
+  "expected": 818.63,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1069"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C003"
+    }
+   ],
+   [
+    "get_tier_discount",
+    {
+     "tier": "gold"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "get_order",
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t3_04",
+  "tier": 3,
+  "template": "discounted_total",
+  "prompt": "Apply the buyer's loyalty-tier discount to the total of order O1048. What is the discounted total, rounded to 2 decimals?",
+  "answer_type": "num",
+  "expected": 976.85,
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1048"
+    }
+   ],
+   [
+    "get_customer",
+    {
+     "customer_id": "C024"
+    }
+   ],
+   [
+    "get_tier_discount",
+    {
+     "tier": "silver"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "get_order",
+   "get_tier_discount"
+  ]
+ },
+ {
+  "id": "t3_05",
+  "tier": 3,
+  "template": "fulfillable",
+  "prompt": "Can order O1092 be fully fulfilled from current inventory (every line item's quantity is at most the current stock of that product)? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "yes",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1092"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P121"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P113"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P116"
+    }
+   ]
+  ],
+  "n_ref_calls": 4,
+  "required_tools": [
+   "get_inventory",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t3_06",
+  "tier": 3,
+  "template": "fulfillable",
+  "prompt": "Can order O1001 be fully fulfilled from current inventory (every line item's quantity is at most the current stock of that product)? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "no",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1001"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P128"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P112"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_inventory",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t3_07",
+  "tier": 3,
+  "template": "fulfillable",
+  "prompt": "Can order O1091 be fully fulfilled from current inventory (every line item's quantity is at most the current stock of that product)? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "yes",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1091"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P110"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P129"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P135"
+    }
+   ]
+  ],
+  "n_ref_calls": 4,
+  "required_tools": [
+   "get_inventory",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t3_08",
+  "tier": 3,
+  "template": "fulfillable",
+  "prompt": "Can order O1072 be fully fulfilled from current inventory (every line item's quantity is at most the current stock of that product)? Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "no",
+  "reference_calls": [
+   [
+    "get_order",
+    {
+     "order_id": "O1072"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P106"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P111"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_inventory",
+   "get_order"
+  ]
+ },
+ {
+  "id": "t3_09",
+  "tier": 3,
+  "template": "big_orders_open_tickets",
+  "prompt": "Consider all orders (any status) dated from 2026-09-01 to 2026-09-30 inclusive with a total of at least 1100. Which of the customers who placed those orders currently have at least one open support ticket? List their customer IDs, comma-separated.",
+  "answer_type": "set",
+  "expected": [
+   "C007",
+   "C015",
+   "C028"
+  ],
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "date_from": "2026-09-01",
+     "date_to": "2026-09-30",
+     "min_total": 1100
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C002",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C007",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C015",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C016",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C023",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C028",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 7,
+  "required_tools": [
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_10",
+  "tier": 3,
+  "template": "big_orders_open_tickets",
+  "prompt": "Consider all orders (any status) dated from 2026-10-01 to 2026-10-31 inclusive with a total of at least 1200. Which of the customers who placed those orders currently have at least one open support ticket? List their customer IDs, comma-separated.",
+  "answer_type": "set",
+  "expected": [
+   "C018",
+   "C019"
+  ],
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "date_from": "2026-10-01",
+     "date_to": "2026-10-31",
+     "min_total": 1200
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C006",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C010",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C016",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C018",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C019",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C027",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 7,
+  "required_tools": [
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_11",
+  "tier": 3,
+  "template": "big_orders_open_tickets",
+  "prompt": "Consider all orders (any status) dated from 2026-10-01 to 2026-10-31 inclusive with a total of at least 1100. Which of the customers who placed those orders currently have at least one open support ticket? List their customer IDs, comma-separated.",
+  "answer_type": "set",
+  "expected": [
+   "C011",
+   "C018",
+   "C019"
+  ],
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "date_from": "2026-10-01",
+     "date_to": "2026-10-31",
+     "min_total": 1100
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C006",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C010",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C011",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C016",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C018",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C019",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C027",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 8,
+  "required_tools": [
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_12",
+  "tier": 3,
+  "template": "big_orders_open_tickets",
+  "prompt": "Consider all orders (any status) dated from 2026-09-01 to 2026-09-30 inclusive with a total of at least 1200. Which of the customers who placed those orders currently have at least one open support ticket? List their customer IDs, comma-separated.",
+  "answer_type": "set",
+  "expected": [
+   "C007",
+   "C015",
+   "C028"
+  ],
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "date_from": "2026-09-01",
+     "date_to": "2026-09-30",
+     "min_total": 1200
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C002",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C007",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C015",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C016",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C023",
+     "status": "open"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C028",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 7,
+  "required_tools": [
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_13",
+  "tier": 3,
+  "template": "lowest_stock_across_orders",
+  "prompt": "Look at all non-cancelled orders placed by customer C021. Across every line item in those orders, which product ID currently has the lowest stock? Answer with the product ID only.",
+  "answer_type": "str",
+  "expected": "P128",
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "customer_id": "C021"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1055"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1085"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1087"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P128"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P129"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P130"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P132"
+    }
+   ]
+  ],
+  "n_ref_calls": 8,
+  "required_tools": [
+   "get_inventory",
+   "get_order",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_14",
+  "tier": 3,
+  "template": "lowest_stock_across_orders",
+  "prompt": "Look at all non-cancelled orders placed by customer C002. Across every line item in those orders, which product ID currently has the lowest stock? Answer with the product ID only.",
+  "answer_type": "str",
+  "expected": "P103",
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "customer_id": "C002"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1092"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1108"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P103"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P107"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P113"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P116"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P121"
+    }
+   ]
+  ],
+  "n_ref_calls": 8,
+  "required_tools": [
+   "get_inventory",
+   "get_order",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_15",
+  "tier": 3,
+  "template": "lowest_stock_across_orders",
+  "prompt": "Look at all non-cancelled orders placed by customer C010. Across every line item in those orders, which product ID currently has the lowest stock? Answer with the product ID only.",
+  "answer_type": "str",
+  "expected": "P111",
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "customer_id": "C010"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1051"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1073"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P111"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P124"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P129"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P131"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P139"
+    }
+   ]
+  ],
+  "n_ref_calls": 8,
+  "required_tools": [
+   "get_inventory",
+   "get_order",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_16",
+  "tier": 3,
+  "template": "lowest_stock_across_orders",
+  "prompt": "Look at all non-cancelled orders placed by customer C007. Across every line item in those orders, which product ID currently has the lowest stock? Answer with the product ID only.",
+  "answer_type": "str",
+  "expected": "P108",
+  "reference_calls": [
+   [
+    "search_orders",
+    {
+     "customer_id": "C007"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1005"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1064"
+    }
+   ],
+   [
+    "get_order",
+    {
+     "order_id": "O1084"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P108"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P121"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P128"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P132"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P136"
+    }
+   ],
+   [
+    "get_inventory",
+    {
+     "product_id": "P140"
+    }
+   ]
+  ],
+  "n_ref_calls": 10,
+  "required_tools": [
+   "get_inventory",
+   "get_order",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_17",
+  "tier": 3,
+  "template": "upgrade_eligibility",
+  "prompt": "Is customer C015 eligible for a loyalty-tier upgrade right now? Rules: a basic customer needs more than 250 total spend on non-cancelled orders and at most 1 open support ticket; a silver customer needs more than 600 total spend on non-cancelled orders and zero open tickets; a gold customer is already at the top tier and is not eligible. Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "no",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C015"
+    }
+   ],
+   [
+    "search_orders",
+    {
+     "customer_id": "C015"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C015",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_18",
+  "tier": 3,
+  "template": "upgrade_eligibility",
+  "prompt": "Is customer C027 eligible for a loyalty-tier upgrade right now? Rules: a basic customer needs more than 250 total spend on non-cancelled orders and at most 1 open support ticket; a silver customer needs more than 600 total spend on non-cancelled orders and zero open tickets; a gold customer is already at the top tier and is not eligible. Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "yes",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C027"
+    }
+   ],
+   [
+    "search_orders",
+    {
+     "customer_id": "C027"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C027",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_19",
+  "tier": 3,
+  "template": "upgrade_eligibility",
+  "prompt": "Is customer C005 eligible for a loyalty-tier upgrade right now? Rules: a basic customer needs more than 250 total spend on non-cancelled orders and at most 1 open support ticket; a silver customer needs more than 600 total spend on non-cancelled orders and zero open tickets; a gold customer is already at the top tier and is not eligible. Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "no",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C005"
+    }
+   ],
+   [
+    "search_orders",
+    {
+     "customer_id": "C005"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C005",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "list_tickets",
+   "search_orders"
+  ]
+ },
+ {
+  "id": "t3_20",
+  "tier": 3,
+  "template": "upgrade_eligibility",
+  "prompt": "Is customer C013 eligible for a loyalty-tier upgrade right now? Rules: a basic customer needs more than 250 total spend on non-cancelled orders and at most 1 open support ticket; a silver customer needs more than 600 total spend on non-cancelled orders and zero open tickets; a gold customer is already at the top tier and is not eligible. Answer yes or no.",
+  "answer_type": "bool",
+  "expected": "yes",
+  "reference_calls": [
+   [
+    "get_customer",
+    {
+     "customer_id": "C013"
+    }
+   ],
+   [
+    "search_orders",
+    {
+     "customer_id": "C013"
+    }
+   ],
+   [
+    "list_tickets",
+    {
+     "customer_id": "C013",
+     "status": "open"
+    }
+   ]
+  ],
+  "n_ref_calls": 3,
+  "required_tools": [
+   "get_customer",
+   "list_tickets",
+   "search_orders"
+  ]
+ }
+]
