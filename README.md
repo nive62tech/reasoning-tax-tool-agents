@@ -70,3 +70,6 @@ All tools are mocked over a seeded in-memory store (30 customers, 40 products, 1
 ## Files
 `run_bench.py` runner | `analyze.py` stats + charts | `tasks.py` task generator | `mockdb.py` database + tool implementations |
 `scoring.py` answer parsing + failure categories | `validate_tasks.py` sanity checks | `fake_client.py` offline simulator | `config.py` settings
+
+
+Phase 1 - done
