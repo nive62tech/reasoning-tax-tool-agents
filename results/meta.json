@@ -1,0 +1,16 @@
+{
+ "provider": "gemini",
+ "conditions": {
+  "baseline": {
+   "model": "gemini-3.5-flash-lite",
+   "thinking": "level:minimal"
+  },
+  "reasoning": {
+   "model": "gemini-3.5-flash-lite",
+   "thinking": "level:high"
+  }
+ },
+ "price_in": 0.75,
+ "price_out": 3.75,
+ "dry_run": false
+}

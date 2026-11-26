@@ -2,6 +2,28 @@
 Experiment kit: 60 deterministic tool-calling tasks, a runner that executes each one with and without
 extended thinking, and an analysis script that outputs article-ready tables and charts.
 
+
+## 0. Using Google Gemini (free tier) instead of Anthropic
+Default Gemini design: the **same model** (`gemini-3.6-flash`) with thinking `MINIMAL` (baseline) vs `HIGH` (reasoning).
+Gemini 3 models cannot fully switch thinking off, and MINIMAL "does not guarantee thinking is off", so describe the
+baseline as *minimal thinking* in the article. `gemini-3.8-flash` has no MINIMAL level (lowest is LOW), so it is not the default.
+```powershell
+pip install -r requirements.txt
+$env:GEMINI_API_KEY = "your-key-from-aistudio.google.com/apikey"
+python run_bench.py --provider gemini --dry-run          # offline check (fake numbers)
+python run_bench.py --provider gemini --limit 6          # real smoke test
+python run_bench.py --provider gemini --repeats 1        # full run (resumable)
+python analyze.py
+```
+- **Rate limits:** free-tier limits are per project and shown in AI Studio. `--rpm 8` (default `GEMINI_RPM`) paces requests; lower it
+  if you see 429 errors. Throttle and retry sleeps are **excluded** from reported wall-clock time.
+- **Daily quota:** if the daily cap is hit, the run stops cleanly. Re-run the same command later and it continues.
+  `--max-runs 100` caps a session.
+- **Thinking tokens** are reported separately by Gemini (`thoughts_token_count`) and billed as output; they appear in `thinking_tokens`.
+- **Cost columns** use list-price equivalents (`GEMINI_PRICE_IN_PER_MTOK`, `GEMINI_PRICE_OUT_PER_MTOK`); the free tier itself costs $0.
+- **Privacy:** on the free tier, Google may use prompts/responses to improve its products. These tasks are synthetic, so this is fine.
+- Override settings with `GEMINI_MODEL`, `GEMINI_BASELINE_THINKING` / `GEMINI_REASONING_THINKING` (`level:low`, `level:high`, or `budget:1024` for older 2.5 models; never mix level and budget).
+
 ## 1. Setup (2 minutes)
 ```bash
 cd agent_reasoning_bench
@@ -68,10 +90,5 @@ All tools are mocked over a seeded in-memory store (30 customers, 40 products, 1
 - `fake_client.py` produces made-up numbers for testing only. **Never report `results_dry/`.**
 
 ## Files
-`run_bench.py` runner | `analyze.py` stats + charts | `tasks.py` task generator | `mockdb.py` database + tool implementations |
+`run_bench.py` runner | `providers.py` Anthropic + Gemini adapters | `analyze.py` stats + charts | `tasks.py` task generator | `mockdb.py` database + tool implementations |
 `scoring.py` answer parsing + failure categories | `validate_tasks.py` sanity checks | `fake_client.py` offline simulator | `config.py` settings
-
-
-Phase 1 - done
-Phase 2 - done
-Phase 3 - done

@@ -38,3 +38,40 @@ class FakeClient:
             content.insert(0, NS(type="thinking", thinking="x" * (think_tok * 4), signature="sig"))
         usage = NS(input_tokens=ctx, output_tokens=out, cache_creation_input_tokens=0, cache_read_input_tokens=0)
         return NS(content=content, stop_reason=stop, usage=usage)
+
+
+class FakeGeminiClient:
+    """Offline stand-in for google-genai's Client, returning REAL SDK response objects
+    (so the adapter's parsing is exercised). Numbers are made up; for testing only."""
+
+    def __init__(self, tasks):
+        from google.genai import types
+        self.t = types
+        self.by_prompt = {t["prompt"]: t for t in tasks}
+        self.models = self
+
+    def generate_content(self, model, contents, config):
+        t = self.t
+        task = self.by_prompt[contents[0].parts[0].text]
+        level = str(getattr(config.thinking_config, "thinking_level", "") or "")
+        thinking = "HIGH" in level.upper()
+        step = sum(1 for c in contents if c.role == "user" and c.parts and c.parts[0].function_response)
+        rng = random.Random(f"{task['id']}|{thinking}|{step}")
+        calls = task["reference_calls"]
+        think_tok = rng.randint(300, 1500) if thinking else rng.randint(0, 20)
+        ctx = 400 + 250 * step
+        if step < len(calls):
+            name, args = calls[step]
+            parts = [t.Part(function_call=t.FunctionCall(name=name, args=args))]
+            out = 40
+        else:
+            p_wrong = ({1: 0.02, 2: 0.08, 3: 0.40} if not thinking else {1: 0.02, 2: 0.04, 3: 0.12})[task["tier"]]
+            wrong = random.Random(f"w|{task['id']}|{thinking}").random() < p_wrong
+            exp = task["expected"]
+            ans = "0" if wrong else (", ".join(exp) if isinstance(exp, list) else str(exp))
+            parts = [t.Part(text=f"Done.\nANSWER: {ans}")]
+            out = 30
+        um = t.GenerateContentResponseUsageMetadata(prompt_token_count=ctx, candidates_token_count=out,
+                                                    thoughts_token_count=think_tok, total_token_count=ctx + out + think_tok)
+        cand = t.Candidate(content=t.Content(role="model", parts=parts), finish_reason="STOP")
+        return t.GenerateContentResponse(candidates=[cand], usage_metadata=um)

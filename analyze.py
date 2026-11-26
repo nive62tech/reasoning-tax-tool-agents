@@ -34,9 +34,12 @@ def wilson(k, n, z=1.96):
     return c - h, c + h
 
 
+PRICES = {"in": config.PRICE_IN_PER_MTOK, "out": config.PRICE_OUT_PER_MTOK}
+
+
 def cost(row):
-    return (row["input_tokens"] + row["cache_creation_tokens"] + row["cache_read_tokens"]) * config.PRICE_IN_PER_MTOK / 1e6 \
-        + row["output_tokens"] * config.PRICE_OUT_PER_MTOK / 1e6
+    return (row["input_tokens"] + row["cache_creation_tokens"] + row["cache_read_tokens"]) * PRICES["in"] / 1e6 \
+        + row["output_tokens"] * PRICES["out"] / 1e6
 
 
 def stats(rows):
@@ -100,6 +103,10 @@ def main():
     ap.add_argument("--results", default="results")
     a = ap.parse_args()
     rows = [json.loads(l) for l in open(os.path.join(a.results, "raw.jsonl"))]
+    meta_path = os.path.join(a.results, "meta.json")
+    meta = json.load(open(meta_path)) if os.path.exists(meta_path) else {}
+    if meta:
+        PRICES["in"], PRICES["out"] = meta["price_in"], meta["price_out"]
     rows = [r for r in rows if not r.get("error")]
     out_dir = os.path.join(a.results, "analysis")
     os.makedirs(out_dir, exist_ok=True)
@@ -110,9 +117,13 @@ def main():
 
     md = ["# Results summary", "",
           f"Models: baseline=`{base[0]['model']}`, reasoning=`{reas[0]['model']}` "
-          f"(thinking budget {config.THINKING_PARAM}). Runs analysed: {len(base)} baseline, {len(reas)} reasoning.",
-          f"Prices used for cost: ${config.PRICE_IN_PER_MTOK}/Mtok input, ${config.PRICE_OUT_PER_MTOK}/Mtok output "
-          "(edit config.py). Total tokens = input + output (output includes thinking tokens).", ""]
+          f"(baseline thinking: `{base[0].get('thinking_spec')}`; reasoning thinking: `{reas[0].get('thinking_spec')}`). "
+          f"Provider: {meta.get('provider', 'unknown')}. Runs analysed: {len(base)} baseline, {len(reas)} reasoning.",
+          f"Prices used for cost: ${PRICES['in']}/Mtok input, ${PRICES['out']}/Mtok output "
+          "(list-price equivalent; edit config.py). Total tokens = input + output (output includes thinking tokens). "
+          "Wall-clock excludes client-side throttling and retry sleeps.", ""]
+    if meta.get("dry_run"):
+        md.insert(1, "> **DRY RUN: simulated data. Do not report these numbers.**\n")
 
     ov_md, ov = table([("All tasks", (base, reas))], "Scope")
     tier_groups = [(TIER_NAMES[t], ([r for r in base if r["tier"] == t], [r for r in reas if r["tier"] == t]))
@@ -158,11 +169,14 @@ def main():
            f"- Baseline better on {len(hurt)} tasks: {', '.join(hurt) or 'none'}", ""]
 
     # Thinking token estimate
+    tb, tr = mean(r.get("thinking_tokens", 0) for r in base), mean(r.get("thinking_tokens", 0) for r in reas)
+    think_note = (f" Provider-reported thinking tokens per task: {tb:.0f} (baseline) vs {tr:.0f} (reasoning)."
+                  if (tb or tr) else "")
     extra_out = c["reas"]["out_tokens"] - c["base"]["out_tokens"]
     md += ["## Token accounting note", "",
            f"Mean output tokens per task rose from {c['base']['out_tokens']:.0f} to {c['reas']['out_tokens']:.0f} "
            f"(+{extra_out:.0f}); this increase is almost entirely thinking tokens. Mean input tokens: "
-           f"{c['base']['in_tokens']:.0f} vs {c['reas']['in_tokens']:.0f}.", ""]
+           f"{c['base']['in_tokens']:.0f} vs {c['reas']['in_tokens']:.0f}." + think_note, ""]
     open(os.path.join(out_dir, "summary.md"), "w").write("\n".join(md))
     json.dump({"overall": ov, "tiers": tiers, "chain_length": chains}, open(os.path.join(out_dir, "summary.json"), "w"), indent=1, default=str)
 
