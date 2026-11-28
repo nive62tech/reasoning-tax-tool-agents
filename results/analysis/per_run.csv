@@ -119,3 +119,123 @@ t3_19,3,upgrade_eligibility,3,baseline,gemini-3.5-flash-lite,0,True,True,True,no
 t3_19,3,upgrade_eligibility,3,reasoning,gemini-3.5-flash-lite,0,True,True,True,no,no,5,9,0,8770,2123,10893,16.69,16.685,FinishReason.STOP
 t3_20,3,upgrade_eligibility,3,reasoning,gemini-3.5-flash-lite,0,True,True,True,yes,yes,3,5,0,5033,2008,7041,16.781,16.778,FinishReason.STOP
 t3_20,3,upgrade_eligibility,3,baseline,gemini-3.5-flash-lite,0,True,True,True,yes,yes,3,6,0,3564,440,4004,9.697,9.694,FinishReason.STOP
+t1_01,1,order_status,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,delivered,delivered,2,1,0,1829,239,2068,2.682,2.66,FinishReason.STOP
+t1_01,1,order_status,1,baseline,gemini-3.5-flash-lite,1,True,True,True,delivered,delivered,2,1,0,1752,39,1791,2.108,2.107,FinishReason.STOP
+t1_02,1,order_status,1,baseline,gemini-3.5-flash-lite,1,True,True,True,cancelled,cancelled,2,1,0,1753,39,1792,2.112,2.11,FinishReason.STOP
+t1_02,1,order_status,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,cancelled,cancelled,2,1,0,1845,322,2167,2.736,2.735,FinishReason.STOP
+t1_03,1,order_total,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,281.59,281.59,2,1,0,1813,367,2180,2.743,2.741,FinishReason.STOP
+t1_03,1,order_total,1,baseline,gemini-3.5-flash-lite,1,True,True,True,281.59,281.59,2,1,0,1754,51,1805,2.332,2.33,FinishReason.STOP
+t1_04,1,order_total,1,baseline,gemini-3.5-flash-lite,1,True,True,True,642.51,642.51,2,1,0,1754,31,1785,1.828,1.826,FinishReason.STOP
+t1_04,1,order_total,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,642.51,642.51,2,1,0,1846,336,2182,2.943,2.941,FinishReason.STOP
+t1_05,1,customer_email,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,maya.garcia@example.com,maya.garcia@example.com,2,1,0,1813,330,2143,2.946,2.943,FinishReason.STOP
+t1_05,1,customer_email,1,baseline,gemini-3.5-flash-lite,1,True,True,True,maya.garcia@example.com,maya.garcia@example.com,2,1,0,1686,31,1717,2.454,2.453,FinishReason.STOP
+t1_06,1,customer_email,1,baseline,gemini-3.5-flash-lite,1,True,True,True,liam.brown@example.com,liam.brown@example.com,2,1,0,1686,48,1734,2.252,2.25,FinishReason.STOP
+t1_06,1,customer_email,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,liam.brown@example.com,liam.brown@example.com,2,1,0,1783,294,2077,2.376,2.375,FinishReason.STOP
+t1_07,1,product_price,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,259.35,259.35,2,1,0,1750,290,2040,2.675,2.674,FinishReason.STOP
+t1_07,1,product_price,1,baseline,gemini-3.5-flash-lite,1,True,True,True,259.35,259.35,2,1,0,1676,30,1706,2.235,2.233,FinishReason.STOP
+t1_08,1,product_price,1,baseline,gemini-3.5-flash-lite,1,True,True,True,283.33,283.33,2,1,0,1676,49,1725,2.388,2.386,FinishReason.STOP
+t1_08,1,product_price,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,283.33,283.33,2,1,0,1748,246,1994,2.703,2.702,FinishReason.STOP
+t1_09,1,stock,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,23,23,2,1,0,1759,298,2057,3.011,3.01,FinishReason.STOP
+t1_09,1,stock,1,baseline,gemini-3.5-flash-lite,1,True,True,True,23,23,2,1,0,1669,26,1695,2.271,2.268,FinishReason.STOP
+t1_10,1,stock,1,baseline,gemini-3.5-flash-lite,1,True,True,True,35,35,2,1,0,1669,42,1711,2.11,2.108,FinishReason.STOP
+t1_10,1,stock,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,35,35,2,1,0,1741,197,1938,2.214,2.213,FinishReason.STOP
+t1_11,1,customer_tier,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,silver,silver,2,1,0,1760,233,1993,2.418,2.416,FinishReason.STOP
+t1_11,1,customer_tier,1,baseline,gemini-3.5-flash-lite,1,True,True,True,silver,silver,2,1,0,1684,24,1708,2.329,2.327,FinishReason.STOP
+t1_12,1,customer_tier,1,baseline,gemini-3.5-flash-lite,1,True,True,True,gold,gold,2,1,0,1686,24,1710,2.011,2.01,FinishReason.STOP
+t1_12,1,customer_tier,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,gold,gold,2,1,0,1747,229,1976,2.25,2.249,FinishReason.STOP
+t1_13,1,open_tickets,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,2,2,2,1,0,1845,251,2096,2.654,2.652,FinishReason.STOP
+t1_13,1,open_tickets,1,baseline,gemini-3.5-flash-lite,1,True,True,True,2,2,2,1,0,1729,44,1773,2.06,2.058,FinishReason.STOP
+t1_14,1,open_tickets,1,baseline,gemini-3.5-flash-lite,1,True,True,True,1,1,2,1,0,1694,44,1738,2.832,2.83,FinishReason.STOP
+t1_14,1,open_tickets,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,1,1,2,1,0,1813,330,2143,2.76,2.759,FinishReason.STOP
+t1_15,1,newsletter,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,no,no,2,1,0,1786,254,2040,3.185,3.184,FinishReason.STOP
+t1_15,1,newsletter,1,baseline,gemini-3.5-flash-lite,1,True,True,True,no,no,2,1,0,1680,28,1708,2.688,2.687,FinishReason.STOP
+t1_16,1,newsletter,1,baseline,gemini-3.5-flash-lite,1,True,True,True,yes,yes,2,1,0,1680,30,1710,2.171,2.17,FinishReason.STOP
+t1_16,1,newsletter,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,yes,yes,2,1,0,1760,252,2012,2.587,2.585,FinishReason.STOP
+t1_17,1,tier_discount,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,5,5,2,1,0,1723,220,1943,2.388,2.387,FinishReason.STOP
+t1_17,1,tier_discount,1,baseline,gemini-3.5-flash-lite,1,True,True,True,5,5,2,1,0,1650,34,1684,2.371,2.369,FinishReason.STOP
+t1_18,1,tier_discount,1,baseline,gemini-3.5-flash-lite,1,True,True,True,10,10,2,1,0,1651,23,1674,2.427,2.426,FinishReason.STOP
+t1_18,1,tier_discount,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,10,10,2,1,0,1727,301,2028,2.738,2.736,FinishReason.STOP
+t1_19,1,not_found,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1734,260,1994,2.772,2.771,FinishReason.STOP
+t1_19,1,not_found,1,baseline,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1657,31,1688,1.801,1.799,FinishReason.STOP
+t1_20,1,not_found,1,baseline,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1657,31,1688,1.821,1.82,FinishReason.STOP
+t1_20,1,not_found,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1762,297,2059,2.422,2.421,FinishReason.STOP
+t2_01,2,order_newsletter,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,no,no,4,3,0,4403,453,4856,5.147,5.144,FinishReason.STOP
+t2_01,2,order_newsletter,3,baseline,gemini-3.5-flash-lite,1,True,True,True,no,no,4,3,0,3884,73,3957,5.218,5.215,FinishReason.STOP
+t2_02,2,order_newsletter,3,baseline,gemini-3.5-flash-lite,1,True,True,True,yes,yes,4,3,0,3883,105,3988,4.604,4.601,FinishReason.STOP
+t2_02,2,order_newsletter,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,yes,yes,4,3,0,4562,474,5036,6.297,6.294,FinishReason.STOP
+t2_03,2,order_customer_name,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,Isha Silva,Isha Silva,3,2,0,2962,264,3226,4.018,4.016,FinishReason.STOP
+t2_03,2,order_customer_name,2,baseline,gemini-3.5-flash-lite,1,True,True,True,Isha Silva,Isha Silva,3,2,0,2790,47,2837,3.178,3.175,FinishReason.STOP
+t2_04,2,order_customer_name,2,baseline,gemini-3.5-flash-lite,1,True,True,True,Anika Rossi,Anika Rossi,3,2,0,2839,52,2891,2.82,2.818,FinishReason.STOP
+t2_04,2,order_customer_name,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,Anika Rossi,Anika Rossi,3,2,0,3159,369,3528,3.312,3.31,FinishReason.STOP
+t2_05,2,order_first_item_name,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,Juicer,Juicer,3,2,0,3041,343,3384,3.876,3.874,FinishReason.STOP
+t2_05,2,order_first_item_name,2,baseline,gemini-3.5-flash-lite,1,True,True,True,Juicer,Juicer,3,2,0,2780,67,2847,3.427,3.425,FinishReason.STOP
+t2_06,2,order_first_item_name,2,baseline,gemini-3.5-flash-lite,1,True,True,True,Drone,Drone,3,2,0,2828,48,2876,3.672,3.67,FinishReason.STOP
+t2_06,2,order_first_item_name,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,Drone,Drone,3,2,0,3046,387,3433,3.572,3.57,FinishReason.STOP
+t2_07,2,email_open_tickets,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,3011,437,3448,4.432,4.43,FinishReason.STOP
+t2_07,2,email_open_tickets,2,baseline,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,2690,78,2768,3.291,3.29,FinishReason.STOP
+t2_08,2,email_open_tickets,2,baseline,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,2694,79,2773,3.651,3.649,FinishReason.STOP
+t2_08,2,email_open_tickets,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,2946,408,3354,3.602,3.601,FinishReason.STOP
+t2_09,2,order_first_item_stock,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,140,140,3,2,0,3065,505,3570,4.208,4.205,FinishReason.STOP
+t2_09,2,order_first_item_stock,2,baseline,gemini-3.5-flash-lite,1,True,True,True,140,140,4,3,0,3845,111,3956,4.717,4.714,FinishReason.STOP
+t2_10,2,order_first_item_stock,2,baseline,gemini-3.5-flash-lite,1,True,True,True,12,12,3,2,0,2828,78,2906,2.857,2.855,FinishReason.STOP
+t2_10,2,order_first_item_stock,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,12,12,3,2,0,3099,407,3506,3.533,3.531,FinishReason.STOP
+t2_11,2,customer_discount,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,5,5,3,2,0,2911,384,3295,3.791,3.789,FinishReason.STOP
+t2_11,2,customer_discount,2,baseline,gemini-3.5-flash-lite,1,True,True,True,5,5,3,2,0,2626,43,2669,3.444,3.442,FinishReason.STOP
+t2_12,2,customer_discount,2,baseline,gemini-3.5-flash-lite,1,True,True,True,0,0,3,2,0,2620,43,2663,3.091,3.089,FinishReason.STOP
+t2_12,2,customer_discount,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,0,0,3,2,0,2881,367,3248,3.526,3.524,FinishReason.STOP
+t2_13,2,order_country,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,IN,IN,3,2,0,3145,386,3531,3.529,3.527,FinishReason.STOP
+t2_13,2,order_country,2,baseline,gemini-3.5-flash-lite,1,True,True,True,IN,IN,3,2,0,2858,62,2920,2.887,2.884,FinishReason.STOP
+t2_14,2,order_country,2,baseline,gemini-3.5-flash-lite,1,True,True,True,DE,DE,3,2,0,2808,62,2870,2.915,2.914,FinishReason.STOP
+t2_14,2,order_country,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,DE,DE,3,2,0,3091,336,3427,3.312,3.309,FinishReason.STOP
+t2_15,2,order_first_item_category,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,kitchen,kitchen,3,2,0,3110,385,3495,3.487,3.485,FinishReason.STOP
+t2_15,2,order_first_item_category,2,baseline,gemini-3.5-flash-lite,1,True,True,True,kitchen,kitchen,3,2,0,2833,79,2912,3.544,3.541,FinishReason.STOP
+t2_16,2,order_first_item_category,2,baseline,gemini-3.5-flash-lite,1,True,True,True,office,office,3,2,0,2782,71,2853,2.816,2.813,FinishReason.STOP
+t2_16,2,order_first_item_category,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,office,office,3,2,0,3057,386,3443,4.074,4.072,FinishReason.STOP
+t2_17,2,order_buyer_tickets,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,3230,470,3700,4.272,4.27,FinishReason.STOP
+t2_17,2,order_buyer_tickets,2,baseline,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,2846,71,2917,3.309,3.307,FinishReason.STOP
+t2_18,2,order_buyer_tickets,2,baseline,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,2794,71,2865,3.161,3.159,FinishReason.STOP
+t2_18,2,order_buyer_tickets,2,reasoning,gemini-3.5-flash-lite,1,True,True,True,1,1,3,2,0,3276,540,3816,4.392,4.39,FinishReason.STOP
+t2_19,2,not_found_chain,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1842,412,2254,3.504,3.503,FinishReason.STOP
+t2_19,2,not_found_chain,1,baseline,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1695,27,1722,2.086,2.084,FinishReason.STOP
+t2_20,2,not_found_chain,1,baseline,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1695,27,1722,2.055,2.054,FinishReason.STOP
+t2_20,2,not_found_chain,1,reasoning,gemini-3.5-flash-lite,1,True,True,True,NOT_FOUND,NOT_FOUND,2,1,1,1754,313,2067,2.999,2.998,FinishReason.STOP
+t3_01,3,discounted_total,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,946.67,946.67,4,3,0,4278,798,5076,5.526,5.522,FinishReason.STOP
+t3_01,3,discounted_total,3,baseline,gemini-3.5-flash-lite,1,True,True,True,946.67,946.67,4,3,0,3915,201,4116,4.444,4.442,FinishReason.STOP
+t3_02,3,discounted_total,3,baseline,gemini-3.5-flash-lite,1,True,True,True,162.91,162.91,4,3,0,3910,146,4056,4.769,4.766,FinishReason.STOP
+t3_02,3,discounted_total,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,162.91,162.91,4,3,0,4567,712,5279,6.417,6.414,FinishReason.STOP
+t3_03,3,discounted_total,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,818.63,818.63,4,3,0,4338,897,5235,5.858,5.854,FinishReason.STOP
+t3_03,3,discounted_total,3,baseline,gemini-3.5-flash-lite,1,True,True,True,818.63,818.63,4,3,0,3990,187,4177,4.349,4.346,FinishReason.STOP
+t3_04,3,discounted_total,3,baseline,gemini-3.5-flash-lite,1,True,True,True,976.85,976.85,4,3,0,3991,197,4188,6.4,6.396,FinishReason.STOP
+t3_04,3,discounted_total,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,976.85,976.85,4,3,0,4655,782,5437,6.111,6.108,FinishReason.STOP
+t3_05,3,fulfillable,4,reasoning,gemini-3.5-flash-lite,1,True,True,True,yes,yes,3,4,0,3356,747,4103,4.596,4.594,FinishReason.STOP
+t3_05,3,fulfillable,4,baseline,gemini-3.5-flash-lite,1,True,True,True,yes,yes,3,4,0,2974,204,3178,3.645,3.643,FinishReason.STOP
+t3_06,3,fulfillable,3,baseline,gemini-3.5-flash-lite,1,True,True,True,no,no,3,3,0,2872,170,3042,3.312,3.31,FinishReason.STOP
+t3_06,3,fulfillable,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,no,no,3,3,0,3300,653,3953,4.285,4.283,FinishReason.STOP
+t3_07,3,fulfillable,4,reasoning,gemini-3.5-flash-lite,1,True,True,True,yes,yes,3,4,0,3558,769,4327,5.055,5.053,FinishReason.STOP
+t3_07,3,fulfillable,4,baseline,gemini-3.5-flash-lite,1,True,True,True,yes,yes,3,4,0,2980,206,3186,5.351,5.348,FinishReason.STOP
+t3_08,3,fulfillable,3,baseline,gemini-3.5-flash-lite,1,True,True,True,no,no,3,3,0,2869,164,3033,3.439,3.436,FinishReason.STOP
+t3_08,3,fulfillable,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,no,no,3,3,0,3246,665,3911,4.264,4.261,FinishReason.STOP
+t3_09,3,big_orders_open_tickets,7,reasoning,gemini-3.5-flash-lite,1,True,True,True,"C007, C015, C028","['C007', 'C015', 'C028']",5,11,0,13721,4174,17895,14.147,14.143,FinishReason.STOP
+t3_09,3,big_orders_open_tickets,7,baseline,gemini-3.5-flash-lite,1,True,True,True,"C007, C015, C028","['C007', 'C015', 'C028']",3,10,0,4679,484,5163,4.372,4.369,FinishReason.STOP
+t3_10,3,big_orders_open_tickets,7,baseline,gemini-3.5-flash-lite,1,False,False,False,NOT_FOUND,"['C018', 'C019']",5,4,0,5178,345,5523,5.399,5.395,FinishReason.STOP
+t3_10,3,big_orders_open_tickets,7,reasoning,gemini-3.5-flash-lite,1,True,True,True,"C018,C019","['C018', 'C019']",11,10,0,33970,3152,37122,20.386,20.379,FinishReason.STOP
+t3_11,3,big_orders_open_tickets,8,reasoning,gemini-3.5-flash-lite,1,False,False,False,,"['C011', 'C018', 'C019']",15,141,10,115657,10539,126196,43.524,43.506,FinishReason.STOP
+t3_11,3,big_orders_open_tickets,8,baseline,gemini-3.5-flash-lite,1,False,False,False,ANSWER: NOT_FOUND,"['C011', 'C018', 'C019']",5,4,0,5178,278,5456,5.604,5.6,FinishReason.STOP
+t3_12,3,big_orders_open_tickets,7,baseline,gemini-3.5-flash-lite,1,False,False,True,,"['C007', 'C015', 'C028']",15,15,0,22381,1010,23391,19.335,19.324,FinishReason.STOP
+t3_12,3,big_orders_open_tickets,7,reasoning,gemini-3.5-flash-lite,1,False,False,False,,"['C007', 'C015', 'C028']",15,15,0,62814,3578,66392,28.027,28.017,FinishReason.STOP
+t3_13,3,lowest_stock_across_orders,8,reasoning,gemini-3.5-flash-lite,1,True,True,True,P128,P128,5,11,0,11160,2185,13345,9.688,9.684,FinishReason.STOP
+t3_13,3,lowest_stock_across_orders,8,baseline,gemini-3.5-flash-lite,1,True,True,True,P128,P128,7,11,1,8670,475,9145,7.682,7.677,FinishReason.STOP
+t3_14,3,lowest_stock_across_orders,8,baseline,gemini-3.5-flash-lite,1,True,True,True,P103,P103,5,11,1,6267,541,6808,5.487,5.482,FinishReason.STOP
+t3_14,3,lowest_stock_across_orders,8,reasoning,gemini-3.5-flash-lite,1,True,True,True,P103,P103,4,10,0,7494,1713,9207,7.557,7.553,FinishReason.STOP
+t3_15,3,lowest_stock_across_orders,8,reasoning,gemini-3.5-flash-lite,1,True,True,True,P111,P111,5,11,0,9112,1584,10696,8.475,8.47,FinishReason.STOP
+t3_15,3,lowest_stock_across_orders,8,baseline,gemini-3.5-flash-lite,1,True,True,True,P111,P111,4,10,0,5273,567,5840,6.081,6.077,FinishReason.STOP
+t3_16,3,lowest_stock_across_orders,10,baseline,gemini-3.5-flash-lite,1,True,True,True,P108,P108,4,17,0,7507,559,8066,5.178,5.174,FinishReason.STOP
+t3_16,3,lowest_stock_across_orders,10,reasoning,gemini-3.5-flash-lite,1,True,True,True,P108,P108,4,12,0,8730,2129,10859,9.173,9.17,FinishReason.STOP
+t3_18,3,upgrade_eligibility,3,baseline,gemini-3.5-flash-lite,1,True,True,True,yes,yes,2,5,0,2342,253,2595,1.976,1.975,FinishReason.STOP
+t3_18,3,upgrade_eligibility,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,yes,yes,5,6,0,8450,1984,10434,9.305,9.299,FinishReason.STOP
+t3_19,3,upgrade_eligibility,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,no,no,4,6,0,7119,1800,8919,7.31,7.303,FinishReason.STOP
+t3_19,3,upgrade_eligibility,3,baseline,gemini-3.5-flash-lite,1,True,True,True,no,no,2,5,0,2126,255,2381,2.093,2.091,FinishReason.STOP
+t3_20,3,upgrade_eligibility,3,baseline,gemini-3.5-flash-lite,1,True,True,True,yes,yes,3,6,0,3261,322,3583,2.991,2.989,FinishReason.STOP
+t3_20,3,upgrade_eligibility,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,yes,yes,2,5,0,2890,1851,4741,5.611,5.609,FinishReason.STOP
+t3_17,3,upgrade_eligibility,3,reasoning,gemini-3.5-flash-lite,1,True,True,True,no,no,3,6,0,4408,767,5175,6.211,6.191,FinishReason.STOP
+t3_17,3,upgrade_eligibility,3,baseline,gemini-3.5-flash-lite,1,True,True,True,no,no,2,5,0,2377,291,2668,2.245,2.243,FinishReason.STOP
